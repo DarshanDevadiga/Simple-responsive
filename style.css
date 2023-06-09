@@ -1,0 +1,271 @@
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+        font-family: 'Space Grotesk'
+}
+body {
+    font-size: 23px;
+    background-color: #f5c901;
+    overflow: hidden;
+}
+
+body::-webkit-scrollbar {
+    width: 5px;
+}
+
+.logo{
+font-weight: bolder;
+    margin-left: 70px;
+    cursor: pointer;   
+    font-style: italic;
+}
+
+
+.img-logo{
+    margin-top: 10px;
+height: 50px;
+margin-bottom: -10px;
+}
+
+.logo-text{
+    font-size: 40px;
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+    font-weight: bolder;
+}
+
+.active {
+    color: white;
+}
+
+li a:hover {
+    color: white;
+}
+
+h1 {
+    font-family: 'Viktorie';
+    font-size: 42px;
+}
+
+header {
+    padding: 0;
+}
+
+
+
+
+/* Start of Header Styling*/
+.header {
+    position: relative;
+    width: 100%;
+    height: 70px;
+    z-index: 3;
+}
+
+.header ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: auto;
+    text-align: center;
+}
+
+.header li a {
+    display: block;
+    padding: 20px 20px;
+    text-decoration: none;
+}
+
+
+
+.header .logo {
+    display: block;
+    float: left;
+    padding: 5px 30px;
+}
+
+/* menu */
+.header .menu {
+    clear: both;
+    max-height: 0px;
+    font-size: 22px;
+    /* top:30px; */
+    margin-top: 10px;
+    transition: max-height .5s ease-out;
+    font-family: 'Space Grotesk';
+    background-color: #f5c801de;
+}
+
+.header .menu li button {
+    background-color: transparent;
+    border: none;
+    font-size: 22px;
+    font-family: 'Space Grotesk';
+    margin-right: 10px;
+    margin-top: 0;
+}
+
+/* menu icon */
+.header .menu-icon {
+    cursor: pointer;
+    display: inline-block;
+    float: right;
+    padding: 42px 30px;
+    position: relative;
+    user-select: none;
+}
+
+.header .menu-icon .navicon {
+    display: block;
+    height: 2px;
+    position: relative;
+    width: 25px;
+}
+
+.header .menu-icon .navicon:before,
+.header .menu-icon .navicon:after {
+    background: #333;
+    content: '';
+    display: block;
+    height: 100%;
+    position: relative;
+    transition: all .2s ease-out;
+    width: 100%;
+}
+
+
+.header .menu-icon .navicon:after {
+    top: -5px;
+}
+
+/* menu btn */
+.header .menu-btn {
+    display: none;
+}
+
+.header .menu-btn:checked~.menu {
+    max-height: 340px;
+}
+
+.header .menu-btn:checked~.menu-icon .navicon {
+    background: transparent;
+}
+
+.header .menu-btn:checked~.menu-icon .navicon:before {
+    transform: rotate(-45deg);
+}
+
+.header .menu-btn:checked~.menu-icon .navicon:after {
+    transform: rotate(45deg);
+}
+
+.header .menu-btn:checked~.menu-icon:not(.steps) .navicon:before,
+.header .menu-btn:checked~.menu-icon:not(.steps) .navicon:after {
+    top: 0;
+}
+
+.main{
+    padding:30px;
+    margin: 30px;
+    display: flex;
+}
+.main .row{
+display: flex;
+}
+.main-content{
+    margin-top: 10%;
+}
+
+.main-content p{
+    margin-top: 15px;
+    margin-bottom: 30px;
+    cursor: pointer;
+}
+
+.main-content a{
+    background-color: black;
+    padding: 15px 30px;
+color: #f5c901;
+text-decoration: none;
+border-radius: 30px;
+}
+
+.main-content a:hover{
+    background-color: #f5c801c4;
+        color: #000;
+        border: 3px solid black;
+}
+
+@media (max-width: 1170px) {
+    .main img{
+        width: 350px;
+    }
+    .main-content{
+        margin-top: 15px;
+    }
+}
+
+@media (max-width: 930px) {
+
+.main .row{
+    display: block;
+}
+        .main img {
+
+            width: auto;
+        }
+}
+@media (min-width: 500px) {
+
+.header .menu-icon {
+    margin: 0;
+    margin-left: 40px;
+    }
+}
+@media (min-width: 375px) {
+
+    .header .menu-icon {
+        margin-right: -200px  !important;
+    }
+}
+@media (min-width: 374px) {
+
+    .header .menu-icon {
+        margin-right: -200px;
+    }
+}
+/* 48em = 768px */
+
+@media (min-width: 70em) {
+    .header h1 {
+        font-size: 50px;
+    }
+
+    .header li {
+        float: left;
+    }
+
+    .header li a {
+        padding: 20px 30px;
+    }
+
+    .header .menu {
+        clear: none;
+        float: right;
+        max-height: none;
+    }
+
+    .header .menu-icon {
+        display: none;
+    }
+
+    .header .menu li button {
+        background-color: transparent;
+    }
+}
